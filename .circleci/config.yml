@@ -14,5 +14,6 @@ jobs:
           MYSQL_ROOT_PASSWORD=2009
     steps:
       - checkout 
+      - run: apt update
       - run: apt install -y node 
       
