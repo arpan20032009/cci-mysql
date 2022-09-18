@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-       - image: cimg/node:18.9.0
+       - image: node:18.9.0
          auth:
                   username: arpan2009
                   password: arpan@2009
