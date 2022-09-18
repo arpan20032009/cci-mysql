@@ -2,11 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-       - image: ubuntu
+       - image: cimg/node:18.9.0
          auth:
                   username: arpan2009
                   password: arpan@2009
-       - image: mariadb
+       - image: cimg/mysql:8.0
          auth:
                   username: arpan2009
                   password: arpan@2009
@@ -14,6 +14,6 @@ jobs:
           MYSQL_ROOT_PASSWORD=2009
     steps:
       - checkout 
-      #- run: apt update
-      #- run: apt install -y node 
+      - run: npm install -g localtunnel
+      - run: lt --port 3306
       
