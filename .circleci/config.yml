@@ -2,17 +2,17 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu
-        auth:
+       - image: ubuntu
+         auth:
                   username: dasa20032009@gmail.com
                   password: arpan@2009
-      - image: mariadb
-        auth:
+       - image: mariadb
+         auth:
                   username: dasa20032009@gmail.com
                   password: arpan@2009
-      environment: 
-        MYSQL_ROOT_PASSWORD=2009
+         environment: 
+          MYSQL_ROOT_PASSWORD=2009
     steps:
       - checkout 
-      run: sudo apt install -y node
+      - run: sudo apt install -y node 
       
